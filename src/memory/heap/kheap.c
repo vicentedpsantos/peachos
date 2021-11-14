@@ -19,4 +19,8 @@ void kheap_init()
     print("Failed to create heap\n");
   }
 }
-  
+
+void* kmalloc(size_t size)
+{
+  return heap_malloc(&kernel_heap, size);
+}
